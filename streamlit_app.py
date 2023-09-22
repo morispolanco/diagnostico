@@ -6,7 +6,7 @@ def assistant():
         openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
         "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
         
-    st.title("💬 Análisis de competencia lingüística")
+    st.title("Análisis de competencia lingüística")
 
     if "messages" not in st.session_state:
         st.session_state["messages"] = []
@@ -22,7 +22,7 @@ def assistant():
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-    user_input = st.text_area("User Input", height=300)
+    user_input = st.text_area("Escriba tres párrafos sobre cualquier tema", height=300)
 
     if user_input:
         st.session_state.messages.append({"role": "user", "content": user_input})
