@@ -21,7 +21,7 @@ def assistant():
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-    user_input = st.text_input("User Input")
+    user_input = st.text_input("User Input", height=600)
 
     if user_input:
         st.session_state.messages.append({"role": "user", "content": user_input})
@@ -30,7 +30,7 @@ def assistant():
         st.session_state.messages.append(msg)
         st.chat_message("assistant").write(msg.content)
 
-    if st.button("Generate Optimized Prompt"):
+    if st.button("Analizar"):
         optimized_prompt = generate_optimized_prompt(prompt)
         st.session_state.messages.append({"role": "user", "content": optimized_prompt})
         response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
