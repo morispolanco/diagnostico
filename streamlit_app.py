@@ -17,8 +17,7 @@ def assistant():
 
     openai.api_key = openai_api_key
 
-    prompt = "Tu tarea es hacer una evaluación diagnóstica del siguiente texto. Proporciona un análisis detallado y crítico del texto, identificando sus puntos fuertes y áreas de mejora. Explica tus observaciones de manera clara y concisa, brindando ejemplos relevantes para respaldar tus puntos de vista. Tu evaluación debe ser objetiva y constructiva, ofreciendo sugerencias útiles para mejorar el texto. También puede ser útil proporcionar recomendaciones para la estructura, organización y estilo del texto, si es necesario."
-  
+    prompt = "Tu tarea es hacer una evaluación diagnóstica del siguiente texto. "
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
