@@ -21,7 +21,7 @@ def assistant():
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-    user_input = st.text_input("User Input", height=600)
+    user_input = st.text_area("User Input", height=600)
 
     if user_input:
         st.session_state.messages.append({"role": "user", "content": user_input})
