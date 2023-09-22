@@ -17,7 +17,7 @@ def assistant():
 
     openai.api_key = openai_api_key
 
-    prompt = "Realiza una evaluación diagnóstica del texto proporcionado, considerando tanto aspectos gramaticales como de estilo. Proporciona una respuesta detallada y precisa que identifique y analice los errores gramaticales y sugerir mejoras para el estilo. En tu respuesta, asegúrate de explicar claramente los errores gramaticales encontrados, proporcionando ejemplos específicos y ofreciendo una revisión precisa de cada uno. Además, sugiere cambios y mejoras para mejorar el estilo del texto, teniendo en cuenta la estructura de las oraciones, la elección de las palabras y la coherencia general."
+    prompt = "Analiza la competencia lingüística del autor en un texto dado, evaluando gramática, vocabulario, uso de tiempos verbales, coherencia, cohesión, ortografía y estilo de escritura. Proporciona una evaluación detallada, resaltando fortalezas y áreas de mejora. Utiliza ejemplos del texto para respaldar tus observaciones. Asegúrate de presentar un análisis equilibrado y completo."
     
     if prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
