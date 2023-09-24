@@ -20,7 +20,7 @@ def assistant():
     prompt = "Realiza un diagnóstico de la competencia lingüística del autor del texto evaluando gramática, ortografía, puntuación, vocabulario y estructura de oraciones. Examina su capacidad para comunicar ideas y uso de estilos y tonos según el contexto. Usa ejemplos del texto para respaldar tus hallazgos y, si encuentras áreas mejorable, sugiere recomendaciones apropiadas para mejorar su competencia."
     
     if prompt:
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.messages.append({"role": "assistant", "content": prompt})
 
     user_input = st.text_area("Escriba tres párrafos sobre cualquier tema", height=300)
 
